@@ -6,7 +6,9 @@
 [![Test Coverage][coveralls-image]][coveralls-url]
 [![Gratipay][gratipay-image]][gratipay-url]
 
-Node.js body parsing middleware.
+Node.js middleware phân tích body trong http.
+
+phân tích request bodies như trong một middleware trước khi ứng dụng của bạn xử lý.
 
 Parse incoming request bodies in a middleware before your handlers, available
 under the `req.body` property.
@@ -14,8 +16,10 @@ under the `req.body` property.
 [Learn about the anatomy of an HTTP transaction in Node.js](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/).
 
 _This does not handle multipart bodies_, due to their complex and typically
-large nature. For multipart bodies, you may be interested in the following
-modules:
+
+module này không hỗ trợ xử lý form-data mà trong đó có cơ chế multipart file bởi nó xử lý tương đối phức tạp
+bạn có thể xem xet xử dụng thêm
+
 
   * [busboy](https://www.npmjs.org/package/busboy#readme) and
     [connect-busboy](https://www.npmjs.org/package/connect-busboy#readme)
@@ -24,7 +28,7 @@ modules:
   * [formidable](https://www.npmjs.org/package/formidable#readme)
   * [multer](https://www.npmjs.org/package/multer#readme)
 
-This module provides the following parsers:
+Những gì module này hỗ trợ :
 
   * [JSON body parser](#bodyparserjsonoptions)
   * [Raw body parser](#bodyparserrawoptions)
